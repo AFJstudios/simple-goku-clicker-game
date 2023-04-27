@@ -9,17 +9,60 @@
 	<title>Goku Clicker</title>
 
 	<!--Additional elements for browsers and robots go here goes here-->
+    <style>
+        img {
+            image-rendering: pixelated;
+            }
 
+        #currentEvolution {
+            width: 100%;
+            max-width: 250px;
+            margin: auto;
+            position: relative;
+            display: block;
+        }
+
+        .textArea {
+            display: block;
+            position: relative;
+            text-align: center;
+        }
+
+        .actionButtons {
+            display: block;
+            position: absolute;
+            text-align: center;
+            width: 100%;
+            bottom: 0;
+            left: 0;
+        }
+
+        .actionButtons button {
+            display: block;
+            position: relative;
+            text-align: center;
+            width: 100%;
+            height: 40px;
+            margin: auto;
+        }
+    </style>
 </head>
 
 <body>
-	<h1>Ready to play!</h1>
-    <p>Top Score: <span id="topScore"></span></p>
-    <p>Charge: <span id="score"></span></p>
+    <div class="textArea">
+        <h1>Ready to play!</h1>
+        <p>Top Score: <span id="topScore"></span></p>
+        <p>Charge: <span id="score"></span></p>
+    </div>
+ 
     <img id="currentEvolution" src="0.gif" alt="Goku">
-    <button onclick="startGame()">Start Game</button>
-    <button onclick="chargeUp()">Charge!</button>
-    <button onclick="reset()">Reset</button>
+
+    <div class="actionButtons">
+        <button onclick="chargeUp()">Charge!</button>
+        <button onclick="startGame()">Start Game</button>
+        <button onclick="reset()">Reset</button>
+    </div>
+    
     <script src="main.js"></script>
 </body>
 

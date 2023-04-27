@@ -43,6 +43,7 @@ function update() {
     }
     if (score <= 0) {
         gamestate = 0;
+        document.getElementById("currentEvolution").src = "0.gif";
     }
     if (topScore > 20) {
         multiplier = 2;
@@ -72,8 +73,10 @@ function update() {
 
 function reset() {
     score = 0;
-    multiplier = 0;
     document.getElementById("score").innerHTML = score;
+    topScore = 0;
+    document.getElementById("topScore").innerHTML = topScore;
+    multiplier = 0;
 }
 
 document.body.onkeyup = function(e) {
